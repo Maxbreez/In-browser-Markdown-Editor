@@ -103,7 +103,7 @@ In future projects, I plan to focus more on accessibility and performance optimi
 https://www.markdownguide.org/ - This is a comprehensive guide to markdown that helped me understand the intricacies of markdown syntax.
 
 ## Author
-- Website - [Maxwell Kwaku Nyarko]()
+- Website - [Maxwell Kwaku Nyarko](https://maxbreez.github.io/In-browser-Markdown-Editor/)
 
 
 ## Acknowledgments
