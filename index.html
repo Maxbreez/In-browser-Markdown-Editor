@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+    <link rel="stylesheet" href="lib/material-icons.css">
+    <link rel="stylesheet" href="lib/base16-light.css">
+    <link rel="stylesheet" href="codemirror-5.65.16/lib/codemirror.css">
+    <link rel="stylesheet" href="lib/default.css">
+    <link rel="stylesheet" href="lib/github-markdown.css">
+    <link rel="stylesheet" href="lib/spell-checker.min.css">
+    <link rel="stylesheet" href="lib/sweetalert.css">
+    <link rel="stylesheet" href="index.css">
+
+  <title>Frontend Mentor | In-browser markdown editor</title>
+  </head>
+  <body>
+
+    <!-- Main start -->
+    <section id="toplevel">
+      <div id="in"><form><textarea id="code"># Welcome to Markdown</textarea></form></div>
+      <div id="out" class="markdown-body"></div>
+    </section>
+    
+      <div id="menu">
+        <span>Save As</span>
+        <div id="saveas-markdown">
+          <svg height="64" width="64" xmlns="http://www.w3.org/2000/svg">
+            <g transform="scale(0.0625)">
+              <path d="M950.154 192H73.846C33.127 192 0 225.12699999999995 0 265.846v492.308C0 798.875 33.127 832 73.846 832h876.308c40.721 0 73.846-33.125 73.846-73.846V265.846C1024 225.12699999999995 990.875 192 950.154 192zM576 703.875L448 704V512l-96 123.077L256 512v192H128V320h128l96 128 96-128 128-0.125V703.875zM767.091 735.875L608 512h96V320h128v192h96L767.091 735.875z" />
+            </g>
+          </svg>
+          <span>Markdown</span>
+        </div>
+        <div id="saveas-html">
+          <svg height="64" width="64" xmlns="http://www.w3.org/2000/svg">
+            <g transform="scale(0.0625) translate(64,0)">
+              <path d="M608 192l-96 96 224 224L512 736l96 96 288-320L608 192zM288 192L0 512l288 320 96-96L160 512l224-224L288 192z" />
+            </g>
+          </svg>
+          <span>HTML</span>
+        </div>
+        <a id="close-menu">&times;</a>
+      </div>
+    
+    <!-- Main end -->
+  
+    <nav class="container">
+  
+      <div class="first">
+        <input type="checkbox" id="check">
+          <label for="check">
+            <img id="btn" src="assets/icon-menu.svg">
+            <img id="cancel" src="assets/icon-close.svg">
+          </label>
+          <div class="sidebar">
+            <header>Markdown</header>
+            <a href="index.html" title="Create New" ><img src="assets/icon-document.svg" title="Create New"><span>Create New</span></a>
+            <a id="readbutton" title="Reading Mode" class="navbutton left" onclick="toggleReadMode(this)"><i class="material-icons">chrome_reader_mode</i><span>Reading Mode</span></a>
+            <a id="savebutton" title="Save as" class="navbutton left" onclick="showMenu()"><i class="material-icons">file_download</i><span>Save As</span></a>
+            <a class="navbutton left" title="Mode"><img src="assets/icon-dark-mode.svg" id="nightimage" onclick="toggleNightMode(this)"><span id="nightbutton" onclick="toggleNightMode(this)" title="Mode">   Night Mode</span></a>  
+          </div>  
+  
+        <div class="logo">M A R K D O W N</div>
+        <div class="line">|</div>
+        <div class="document">
+          <img src="assets/icon-document.svg">
+        </div>
+  
+        <div>
+          <div class="d-name">Document Name</div>
+          <div class="welcome">welcome.md</div>
+        </div>
+      
+    </div>
+        <div class="icon"><img id="deleteimage" src="assets/icon-delete.svg" onclick="clearContent()"></div>
+        <div><button id="browsersavebutton" title="Save" class="navbutton left" onclick="saveInBrowser()"><img src="assets/icon-save.svg"> Save Changes</button></div> 
+    </nav>
+  
+  <div class="Mark-Pre">
+    <p>MARKODOWN</p>
+    <P>PREVIEW</P>
+    
+    <img src="assets/icon-hide-preview.svg" id="previewbutton" onclick="togglePreviewMode(this)">
+  </div>
+  <script src="lib/spell-checker.min.js"></script>
+  <script src="lib/rawinflate.js"></script>
+  <script src="lib/rawdeflate.js"></script>
+  <script src ="lib/sweetalert.min.js"></script>
+  <script src="lib/markdown-it.js"></script>
+  <script src="lib/markdown-it-footnote.js"></script>
+  <script src="lib/highlight.pack.js"></script>
+  <script src="lib/emojify.js"></script>
+  <script src="codemirror-5.65.16/lib/codemirror.js"></script>
+  <script src="codemirror-5.65.16/mode/xml/xml.js"> </script>
+  <script src="codemirror-5.65.16/addon/mode/overlay.js"></script>
+  <script src="codemirror-5.65.16/mode/markdown/markdown.js"></script>
+  <script src="codemirror-5.65.16/mode/gfm/gfm.js"></script>
+  <script src="codemirror-5.65.16/mode/javascript/javascript.js"></script>
+  <script src="codemirror-5.65.16/mode/css/css.js"></script>
+  <script src="codemirror-5.65.16/mode/htmlmixed/htmlmixed.js"></script>
+  <script src="codemirror-5.65.16/addon/edit/continuelist.js"></script>
+  <script src="index.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
